@@ -1,0 +1,37 @@
+{
+  "name": "zhyt-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:lint": "eslint lib app.js --ext js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zavad4/zhyt-be.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zavad4/zhyt-be/issues"
+  },
+  "homepage": "https://github.com/zavad4/zhyt-be#readme",
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-metarhia": "^7.0.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "fastify": "^4.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^2.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sqlite3": "^5.0.8"
+  }
+}
