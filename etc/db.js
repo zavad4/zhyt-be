@@ -8,9 +8,9 @@ module.exports = {
       database: 'zhyt_db',
     },
     migrations: {
-      directory: __dirname + '/migrations',
+      directory: __dirname + '/../migrations',
     },
     seeds: {
-      directory: __dirname + '/seeds',
+      directory: __dirname + '/../seeds',
     },
 }
