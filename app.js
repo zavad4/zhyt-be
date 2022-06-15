@@ -1,25 +1,31 @@
 'use strict';
-require("dotenv").config();
+// require('dotenv').config();
 const { port } = require('./etc/config');
-const PORT = process.env.A || 3000;
+const routes   = require('./lib/routes');
+const { createLogger } = require('./lib/utils/Logger');
 
-const app = require('../server');
+// const appConfig = {
+//   logger: { level: 'info', prettyPrint: true },
+// };
 
-const isDevMode = process.env.NODE_ENV === 'development'
+const app = require('fastify')();
 
-const appConfig = {
-  logger: isDevMode ?  { level: 'info', prettyPrint: true } : { level: 'warn' }
-}
+// health check route
+app.get('/', (req, reply) => {
+  reply.send({ message: 'It is zhyt-be' });
+});
 
-const app = require('fastify')(appConfig);
+// reqister routes
+routes.forEach(route => {
+  app.route(route);
+});
 
-app.register(require('./lib/router'));
-
-app.listen(port, '::', (err) => {
+// Run the server!
+app.listen(port, 'localhost', (err, address) => {
   if (err) {
     app.log.error(err);
     process.exit(1);
   }
+  const logger = createLogger('app');
+  logger.info(`zhyt-be starting at ${address}`);
 });
-
-module.exports = { build };
