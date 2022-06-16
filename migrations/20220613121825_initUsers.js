@@ -16,7 +16,8 @@ exports.up = function(knex) {
     table.string('last_name').notNullable;
     table.string('password').notNullable;
     table.integer('balance');
-    table.enu('status', [STATUSES.PENDING, STATUSES.ENABLED, STATUSES.BLOCKED]);
+    table.integer('application_id');
+    table.enu('status', [STATUSES.ENABLED, STATUSES.BLOCKED]);
     table.timestamps();
   });
 
