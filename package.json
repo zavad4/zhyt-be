@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "start" : "node app.js",
+    "start": "node app.js",
     "dev": "nodemon app",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:lint": "eslint lib app.js --ext js --fix"
@@ -37,7 +37,7 @@
     "knex": "^2.1.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
-    "sqlite3": "^5.0.8",
+    "uuid": "^8.3.2",
     "winston": "^3.7.2"
   }
 }

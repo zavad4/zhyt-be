@@ -3,10 +3,7 @@ const TABLE_NAME = 'admin_users';
 
 exports.up = function(knex) {
   return knex.schema.createTable(TABLE_NAME, table => {
-    table
-      .increments('id')
-      .unsigned()
-      .primary();
+    table.uuid('id').primary();
     table
       .string('email')
       .unique()
@@ -14,7 +11,7 @@ exports.up = function(knex) {
     table.string('first_name').notNullable;
     table.string('last_name').notNullable;
     table.string('password').notNullable;
-    table.timestamps();
+    table.timestamps(true, true);
   });
 
 };

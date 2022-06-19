@@ -3,14 +3,11 @@ const TABLE_NAME = 'transactions';
 
 exports.up = function(knex) {
   return knex.schema.createTable(TABLE_NAME, table => {
-    table
-      .increments('id')
-      .unsigned()
-      .primary();
-    table.integer('sender_id').notNullable;
-    table.integer('recipient_id').notNullable;
+    table.uuid('id').primary();
+    table.string('sender_id').notNullable;
+    table.string('recipient_id').notNullable;
     table.integer('amount').notNullable;
-    table.timestamps();
+    table.timestamps(true, true);
   });
 
 };
