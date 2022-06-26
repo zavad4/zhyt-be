@@ -1,0 +1,1 @@
+web: npx knex migrate:latest --env development | npx knex seed:run --env development | node app.js
