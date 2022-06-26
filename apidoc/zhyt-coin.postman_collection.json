@@ -1,0 +1,451 @@
+{
+	"info": {
+		"_postman_id": "e783dce3-b2ff-4915-b931-9da2e8c3e7f9",
+		"name": "zhyt-coin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18029184"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"user4@gmail.com\",\n    \"first_name\": \"\",\n    \"last_name\": \"Bbb\",\n    \"password\": \"test123\",\n    \"confirmPassword\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "block",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"user11@gmail.com\",\n    \"first_name\": \"Aaa\",\n    \"last_name\": \"Bbb\",\n    \"password\": \"test123\",\n    \"confirmPassword\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "unblock",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJlbWFpbCI6ImxpemF2b2RvdnNrYUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTU3NTQ0NzIsImV4cCI6MTY1NTc1ODA3Mn0.SSlTBcjW69hTWGDqnE2eIb56vecOYc7qN9ni20F3oHs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"user11@gmail.com\",\n    \"first_name\": \"Aaa\",\n    \"last_name\": \"Bbb\",\n    \"password\": \"test123\",\n    \"confirmPassword\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/users/:id/unblock",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{APP_HOST}}"
+							],
+							"port": "{{APP_PORT}}",
+							"path": [
+								"api",
+								"users",
+								":id",
+								"unblock"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "bbc8e8a0-f0d1-11ec-8ddc-0f49de5e975a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "applications",
+			"item": [
+				{
+					"name": "accept",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1YzE3NDAwLWYwMTItMTFlYy1iOTI3LWQ3YmE3Y2UwODUxZSIsImVtYWlsIjoidXNlcjNAZ21haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY1NTY3MjE4OSwiZXhwIjoxNjU1Njc1Nzg5fQ.cQhnwU_m8wblQPrm7QB5LubFwKPzTKWFDf1z7lDjFPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/applications/:id/accept",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{APP_HOST}}"
+							],
+							"port": "{{APP_PORT}}",
+							"path": [
+								"api",
+								"applications",
+								":id",
+								"accept"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "666f98f0-f012-11ec-b927-d7ba7ce0851e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1YzE3NDAwLWYwMTItMTFlYy1iOTI3LWQ3YmE3Y2UwODUxZSIsImVtYWlsIjoidXNlcjNAZ21haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY1NTY3MjE4OSwiZXhwIjoxNjU1Njc1Nzg5fQ.cQhnwU_m8wblQPrm7QB5LubFwKPzTKWFDf1z7lDjFPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/applications/:id/accept",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{APP_HOST}}"
+							],
+							"port": "{{APP_PORT}}",
+							"path": [
+								"api",
+								"applications",
+								":id",
+								"accept"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "666f98f0-f012-11ec-b927-d7ba7ce0851e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1YzE3NDAwLWYwMTItMTFlYy1iOTI3LWQ3YmE3Y2UwODUxZSIsImVtYWlsIjoidXNlcjNAZ21haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY1NTY3MjE4OSwiZXhwIjoxNjU1Njc1Nzg5fQ.cQhnwU_m8wblQPrm7QB5LubFwKPzTKWFDf1z7lDjFPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/applications/:id/accept",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{APP_HOST}}"
+							],
+							"port": "{{APP_PORT}}",
+							"path": [
+								"api",
+								"applications",
+								":id",
+								"accept"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "666f98f0-f012-11ec-b927-d7ba7ce0851e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "decline",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"liizavodovska@gmail.com\",\n    \"first_name\": \"ccc\",\n    \"last_name\": \"ddd\",\n    \"password\": \"test123\",\n    \"confirmPassword\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/users"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sessions",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"user1@gmail.com\",\n    \"password\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/sessions"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1YzE3NDAwLWYwMTItMTFlYy1iOTI3LWQ3YmE3Y2UwODUxZSIsImVtYWlsIjoidXNlcjNAZ21haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY1NTY3MjE4OSwiZXhwIjoxNjU1Njc1Nzg5fQ.cQhnwU_m8wblQPrm7QB5LubFwKPzTKWFDf1z7lDjFPw2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipient_id\": \"68493af0-f012-11ec-b927-d7ba7ce0851e\",\n    \"amount\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/transactions"
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsaWl6YXZvZG92c2thQGdtYWlsLmNvbSIsImlhdCI6MTY1NTU4MDc5MywiZXhwIjoxNjU1NTg0MzkzfQ.lW4NcFGSHsHgQi3ArxCnLz3fgSOkY3pxrbswkDFMB_M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/transactions"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "jwt",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsaWl6YXZvZG92c2thQGdtYWlsLmNvbSIsImlhdCI6MTY1NTU4MDc5MywiZXhwIjoxNjU1NTg0MzkzfQ.lW4NcFGSHsHgQi3ArxCnLz3fgSOkY3pxrbswkDFMB_M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/transactions/:id",
+							"protocol": "{{PROTOCOL}}",
+							"host": [
+								"{{APP_HOST}}"
+							],
+							"port": "{{APP_PORT}}",
+							"path": [
+								"api",
+								"transactions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admins",
+			"item": [
+				{
+					"name": "sessions",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"lizavodovska@gmail.com\",\n    \"password\": \"test123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{PROTOCOL}}://{{APP_HOST}}:{{APP_PORT}}/api/sessions"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PROTOCOL",
+			"value": "http",
+			"type": "string"
+		},
+		{
+			"key": "APP_HOST",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "APP_PORT",
+			"value": "6666",
+			"type": "string"
+		}
+	]
+}
