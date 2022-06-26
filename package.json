@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app",
-    "migration" : "npx knex migrate:latest --env development | knex seed:run --env development",
+    "migration": "npx knex migrate:latest --env development | knex seed:run --env development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:lint": "eslint lib app.js --ext js --fix"
   },
@@ -38,6 +38,7 @@
     "knex": "^2.1.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "pg": "^8.7.3",
     "uuid": "^8.3.2",
     "winston": "^3.7.2"
   }
